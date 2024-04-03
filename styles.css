@@ -1,37 +1,45 @@
+@font-face {
+  font-family: "CustomFont"; /* Puedes darle el nombre que desees */
+  src: url("assets/fonts/outfit/Outfit-VariableFont_wght.ttf")
+    format("truetype"); /* Especifica la ruta correcta de tu archivo TTF */
+  /* Puedes agregar otros formatos de fuentes como WOFF o WOFF2 para mejor compatibilidad */
+}
+
 html {
-  margin: 50px 300px;
-  background-color: wheat;
-  display: flex;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "CustomFont", sans-serif;
   font-size: 0.85rem;
 }
-
-.presentation img {
-  border-radius: 20px;
-  width: 100%;
+body {
+  margin: 0;
+  background-color: beige;
+  line-height: 1.5;
 }
 
-.container {
-  padding: 25px;
-  border-radius: 20px;
-  background-color: white;
+section {
+  margin: 10px 10px;
+  line-height: 2;
 }
 
-.presentation {
-  margin: 30px;
+.preparation {
+  border: 0px solid rgba(231, 214, 226, 0.911);
+  border-radius: 5px;
+  background-color: rgba(231, 214, 226, 0.911);
+  padding: 10px 30px;
+  margin: 25px 20px;
+}
+
+.nutrition {
   display: flex;
   flex-direction: column;
 }
 
-section {
-  margin: 10px;
-  padding: 10px;
+.nutrition table {
+  padding: 10px 50px;
+  justify-self: space-around;
 }
 
-.preparation {
-  border: 5px solid rgba(231, 214, 226, 0.911);
-  border-radius: 5px;
-  background-color: rgba(231, 214, 226, 0.911);
+.nutrition table tr td {
+  border-bottom: 1px solid black;
 }
 
 h2 {
@@ -40,4 +48,49 @@ h2 {
 
 .bold {
   font-weight: 900;
+}
+
+/* Diseño responsivo */
+
+@media (width>=730px) {
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 25px;
+    background-color: white;
+  }
+
+  .presentation {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .presentation img {
+    border-radius: 20px;
+    max-width: 100%;
+  }
+}
+
+@media (width<730px) {
+  .container {
+    background-color: white;
+  }
+
+  .info {
+    padding: 0px 20px;
+  }
+
+  div .presentation-text {
+    margin: 20px;
+  }
+
+  .presentation {
+    display: flex;
+    flex-direction: column;
+  }
+  .presentation img {
+    width: 100%;
+  }
 }
