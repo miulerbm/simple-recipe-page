@@ -5,14 +5,12 @@
   /* Puedes agregar otros formatos de fuentes como WOFF o WOFF2 para mejor compatibilidad */
 }
 
-html {
-  font-family: "CustomFont", sans-serif;
-  font-size: 0.85rem;
-}
 body {
+  font-family: "CustomFont", sans-serif;
   margin: 0;
   background-color: beige;
   line-height: 1.5;
+  font-size: 0.9rem;
 }
 
 section {
